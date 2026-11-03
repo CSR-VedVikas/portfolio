@@ -275,6 +275,11 @@ export default function Home() {
                 </TextLink>
               </li>
               <li>
+                <TextLink href="/forgefit#demo" testid="forgefit-demo-link">
+                  Watch the demo
+                </TextLink>
+              </li>
+              <li>
                 <TextLink href={FORGEFIT_REPO_URL} testid="forgefit-github-link">
                   GitHub
                 </TextLink>

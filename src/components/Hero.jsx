@@ -55,7 +55,7 @@ export default function Hero() {
           </h1>
           <FadeUp delay={0.45}>
             <p className="font-serif italic text-2xl md:text-[1.75rem] leading-snug mt-6" data-testid="hero-voice-line">
-              Now: taking ForgeFit from verified to deployed, and writing up two capstone papers.
+              Next: ForgeFit goes public, and two capstone papers go out.
             </p>
           </FadeUp>
           <FadeUp delay={0.55} className={`${MONO} text-muted mt-6 leading-relaxed max-w-measure`}>
