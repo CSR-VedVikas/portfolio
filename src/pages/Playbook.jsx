@@ -46,6 +46,20 @@ export default function Playbook() {
         </figure>
       </div>
 
+      {/* Demo video */}
+      <Section id="demo" label="Playbook" title="Demo">
+        <figure className="col-span-12" data-testid="playbook-demo-video">
+          <video
+            controls
+            preload="metadata"
+            src="/cursor-demo.mp4"
+            data-testid="playbook-demo-player"
+            className="w-full h-auto border border-hairline bg-ink"
+          />
+          <figcaption className={`${MONO} text-muted mt-3`}>Cursor_Demo.mp4 — the project demo.</figcaption>
+        </figure>
+      </Section>
+
       {/* At a glance */}
       <Section id="glance" label="Playbook" title="At a glance">
         <dl className="col-span-12">

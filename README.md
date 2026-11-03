@@ -17,3 +17,4 @@ yarn build      # production build in dist/
 - Images: `src/assets/images/` — `PLAYBOOK_SCREENSHOT.png` is in place; the remaining placeholders still expect `ARCHITECTURE_DIAGRAM.png` and `SCREENSHOT_1.png` … `SCREENSHOT_4.png` (ForgeFit case study).
 - Social share: `public/og-image.png` (1200x630) and `public/icon-180.png`, regenerable from `og-image-source.html` / `icon-source.html`. The canonical, og:url, og:image and sitemap absolute URLs are commented out in `index.html` until the site has its production domain; a sitemap is not shipped for the same reason.
 - Certificates: `public/Mastercard_Cybersecurity_Simulation_Certificate.pdf` is linked from the Mastercard row.
+- Demo video: `public/cursor-demo.mp4` (720p web encode) is embedded on `/playbook` in the Demo section.

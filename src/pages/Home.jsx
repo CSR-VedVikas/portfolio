@@ -248,6 +248,11 @@ export default function Home() {
                 </TextLink>
               </li>
               <li>
+                <TextLink href="/playbook#demo" testid="playbook-demo-link">
+                  Watch the demo
+                </TextLink>
+              </li>
+              <li>
                 <TextLink href={PLAYBOOK_LIVE_URL} testid="playbook-live-link">
                   Open the live site
                 </TextLink>
