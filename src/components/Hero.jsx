@@ -53,6 +53,11 @@ export default function Hero() {
               <span className="text-signal">.</span>
             </MaskedLine>
           </h1>
+          <FadeUp delay={0.45}>
+            <p className="font-serif italic text-2xl md:text-[1.75rem] leading-snug mt-6" data-testid="hero-voice-line">
+              Now: taking ForgeFit from verified to deployed, and writing up two capstone papers.
+            </p>
+          </FadeUp>
           <FadeUp delay={0.55} className={`${MONO} text-muted mt-6 leading-relaxed max-w-measure`}>
             Final-year B.Tech Electronics &amp; Communication Engineering with a minor in Computer Science · PES
             University, Bengaluru · Batch 2023–2027

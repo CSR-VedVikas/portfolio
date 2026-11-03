@@ -4,6 +4,12 @@ import AssetImage from "../components/AssetImage.jsx";
 import { TextLink } from "../components/TextLink.jsx";
 import { MONO } from "../data/site.js";
 
+const VIDEO_FILES = import.meta.glob("../assets/videos/*.mp4", { eager: true });
+const VIDEOS = {};
+for (const [p, m] of Object.entries(VIDEO_FILES)) {
+  VIDEOS[p.split("/").pop().toUpperCase()] = m.default;
+}
+
 const GLANCE = [
   ["Role", "Solo: product, backend, frontend, data, security, DevOps"],
   ["Timeline", "July–November 2026"],
@@ -176,6 +182,18 @@ export default function ForgeFit() {
             network where only the FastAPI service reaches the database and the outside APIs.
           </figcaption>
         </figure>
+        <figure className="col-span-12" data-testid="architecture-services">
+          <AssetImage
+            file="ARCHITECTURE_SERVICES.png"
+            alt="Integration map: the app's services and the four external APIs they call"
+            ratio="16 / 9"
+            testid="architecture-services-img"
+          />
+          <figcaption className={`${MONO} text-muted mt-3 leading-relaxed`}>
+            What the outside calls are for: OpenAI splits sentences, USDA FoodData Central covers generic foods, Open
+            Food Facts covers brands and barcodes, and a nutrition API covers exercise calories.
+          </figcaption>
+        </figure>
         <p className="col-span-12 md:col-span-6 md:col-start-4">
           The whole stack starts from one docker compose command.
         </p>
@@ -270,6 +288,18 @@ export default function ForgeFit() {
             ))}
           </tbody>
         </table>
+        <figure className="col-span-12" data-testid="architecture-modules">
+          <AssetImage
+            file="ARCHITECTURE_MODULES.png"
+            alt="Backend module map: middleware, routers, and the modules behind them down to PostgreSQL"
+            ratio="16 / 9"
+            testid="architecture-modules-img"
+          />
+          <figcaption className={`${MONO} text-muted mt-3 leading-relaxed`}>
+            The backend as it stands: middleware, nine router groups, and the modules underneath them, down to the
+            four Alembic migrations.
+          </figcaption>
+        </figure>
         <p className="col-span-12 md:col-span-6 md:col-start-4">
           The practice that held throughout was verifying against the real system. Live API calls exposed the provider
           change, the full Docker stack exposed a missing .dockerignore and a leaked API schema, and the browser
@@ -287,6 +317,34 @@ export default function ForgeFit() {
             </figure>
           ))}
         </div>
+      </Section>
+
+      {/* Demo */}
+      <Section id="demo" label="ForgeFit" title="Demo">
+        <figure className="col-span-12" data-testid="forgefit-demo-video">
+          {VIDEOS["FORGEFIT_DEMO.MP4"] ? (
+            <video
+              controls
+              preload="metadata"
+              src={VIDEOS["FORGEFIT_DEMO.MP4"]}
+              data-testid="forgefit-demo-player"
+              className="w-full h-auto border border-hairline bg-black"
+            />
+          ) : (
+            <div
+              role="img"
+              aria-label="Placeholder for FORGEFIT_DEMO.MP4 — drop the real file into src/assets/videos with this name"
+              data-testid="forgefit-demo-placeholder"
+              className="w-full border border-ink/40 flex items-center justify-center bg-ink/[0.03]"
+              style={{ aspectRatio: "16 / 9" }}
+            >
+              <span className={`${MONO} text-muted px-4 text-center`}>FORGEFIT_DEMO.MP4</span>
+            </div>
+          )}
+          <figcaption className={`${MONO} text-muted mt-3 leading-relaxed`}>
+            The recorded walkthrough, end to end.
+          </figcaption>
+        </figure>
       </Section>
 
       {/* What I would do differently */}
