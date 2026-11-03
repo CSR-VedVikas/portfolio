@@ -36,4 +36,47 @@
     max-width: 100%;
     height: auto;
   }
+
+  @media print {
+    @page {
+      size: A4;
+      margin: 16mm 14mm;
+    }
+    body {
+      background: #ffffff;
+      font-size: 10.5pt;
+      line-height: 1.5;
+    }
+    header,
+    .no-print {
+      display: none !important;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    a[href^="http"]::after,
+    a[href^="mailto:"]::after {
+      content: " (" attr(href) ")";
+      font-family: "JetBrains Mono", monospace;
+      font-size: 8pt;
+      color: #6b6862;
+      word-break: break-all;
+    }
+    section {
+      border-color: #8a8a8a !important;
+    }
+    article,
+    figure,
+    table,
+    dl,
+    tr {
+      break-inside: avoid;
+    }
+    h1,
+    h2,
+    h3 {
+      break-after: avoid;
+    }
+  }
 }

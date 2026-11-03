@@ -14,7 +14,6 @@ yarn build      # production build in dist/
 
 - Copy lives in `src/pages/Home.jsx` and `src/pages/ForgeFit.jsx`; links live in `src/data/site.js`.
 - Résumé: `public/VedVikas_CV.pdf`, linked from the intro (`RESUME_PDF_PATH` in `src/data/site.js`).
-- Images: drop real files into `src/assets/images/` with these exact names, and the labelled placeholder boxes disappear:
-  - `PLAYBOOK_SCREENSHOT.png` — home, Cursor Playbook entry
-  - `ARCHITECTURE_DIAGRAM.png` — case study, architecture section
-  - `SCREENSHOT_1.png` … `SCREENSHOT_4.png` — case study, screenshots grid
+- Images: `src/assets/images/` — `PLAYBOOK_SCREENSHOT.png` is in place; the remaining placeholders still expect `ARCHITECTURE_DIAGRAM.png` and `SCREENSHOT_1.png` … `SCREENSHOT_4.png` (ForgeFit case study).
+- Social share: `public/og-image.png` (1200x630) and `public/icon-180.png`, regenerable from `og-image-source.html` / `icon-source.html`. The canonical, og:url, og:image and sitemap absolute URLs are commented out in `index.html` until the site has its production domain; a sitemap is not shipped for the same reason.
+- Certificates: `public/Mastercard_Cybersecurity_Simulation_Certificate.pdf` is linked from the Mastercard row.

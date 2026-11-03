@@ -1,0 +1,9 @@
+# C S R VedVikas — personal portfolio
+
+Static portfolio of C S R VedVikas, final-year B.Tech Electronics and Communication Engineering student with a minor in Computer Science at PES University, Bengaluru. He builds full-stack web applications and works on applied machine learning, security, hardware verification and antenna design.
+
+- /: intro, selected work, credentials, contact.
+- /forgefit: case study on ForgeFit, a full-stack fitness PWA built with FastAPI, PostgreSQL and React 19.
+- /playbook: case study on the Cursor AI Beginner Playbook, a single-file HTML teaching artifact with an in-browser CNN.
+
+Contact: csrved2504@gmail.com · https://github.com/CSR-VedVikas · https://www.linkedin.com/in/ved-vikas-12a3212a3

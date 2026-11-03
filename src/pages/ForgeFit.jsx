@@ -121,7 +121,7 @@ const SHOTS = [
 
 export default function ForgeFit() {
   useEffect(() => {
-    document.title = "ForgeFit — Case Study — C S R VedVikas";
+    document.title = "ForgeFit — full-stack fitness PWA · Case study · C S R VedVikas";
   }, []);
 
   return (

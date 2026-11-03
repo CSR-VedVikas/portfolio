@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import Nav from "./components/Nav.jsx";
 import Home from "./pages/Home.jsx";
 import ForgeFit from "./pages/ForgeFit.jsx";
+import Playbook from "./pages/Playbook.jsx";
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -51,6 +52,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/forgefit" element={<ForgeFit />} />
+        <Route path="/playbook" element={<Playbook />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </ErrorBoundary>

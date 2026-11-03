@@ -18,7 +18,13 @@ import {
 const BODY = "col-span-12 md:col-span-6 md:col-start-4";
 
 const CERTS = [
-  { name: "Google Cybersecurity Professional Certificate", issuer: "Coursera", date: "Aug–Oct 2024" },
+  {
+    name: "Google Cybersecurity Professional Certificate",
+    issuer: "Coursera",
+    date: "Aug–Oct 2024",
+    verify: "https://coursera.org/share/6375b0f0ef92a981c830adcc6f93f27c",
+    vid: "verify-google-cybersecurity",
+  },
   {
     name: "Google AI Essentials",
     issuer: "Coursera",
@@ -60,7 +66,7 @@ const SIMULATIONS = [
   { name: "Solutions Architecture", issuer: "AWS", date: "Oct 2025" },
   { name: "Risk", issuer: "Goldman Sachs", date: "Oct 2025" },
   { name: "Cyber", issuer: "Deloitte", date: "Oct 2025" },
-  { name: "Cybersecurity", issuer: "Mastercard", date: "Nov 2024" },
+  { name: "Cybersecurity", issuer: "Mastercard", date: "Nov 2024", pdf: "/Mastercard_Cybersecurity_Simulation_Certificate.pdf", pid: "mastercard-certificate-pdf" },
 ];
 
 const HANDS_ON = [
@@ -114,6 +120,11 @@ function CredentialGroup({ heading, note, items }) {
             </span>
             <span className={`${MONO} text-muted flex items-baseline gap-3`}>
               <span>{it.date}</span>
+              {it.pdf && (
+                <TextLink href={it.pdf} download testid={it.pid}>
+                  Certificate (PDF)
+                </TextLink>
+              )}
               {it.verify && (
                 <TextLink href={it.verify} testid={it.vid}>
                   Verify
@@ -129,7 +140,7 @@ function CredentialGroup({ heading, note, items }) {
 
 export default function Home() {
   useEffect(() => {
-    document.title = "C S R VedVikas — Portfolio";
+    document.title = "C S R VedVikas — Full-Stack Developer and ECE Portfolio";
   }, []);
 
   return (
@@ -231,6 +242,11 @@ export default function Home() {
           }
           links={
             <>
+              <li>
+                <TextLink href="/playbook" testid="playbook-case-study-link">
+                  Read the case study
+                </TextLink>
+              </li>
               <li>
                 <TextLink href={PLAYBOOK_LIVE_URL} testid="playbook-live-link">
                   Open the live site

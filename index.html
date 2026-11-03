@@ -8,8 +8,56 @@
       name="description"
       content="Portfolio of C S R VedVikas — full-stack web applications, applied machine learning and security, hardware verification and antenna design. PES University, Bengaluru."
     />
-    <title>C S R VedVikas — Portfolio</title>
-    <link rel="icon" href="data:," />
+    <title>C S R VedVikas — Full-Stack Developer and ECE Portfolio</title>
+    <meta
+      name="description"
+      content="Final-year B.Tech ECE student at PES University, Bengaluru. I build full-stack web applications and work on applied machine learning and security."
+    />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <link rel="icon" type="image/png" sizes="180x180" href="/icon-180.png" />
+    <link rel="apple-touch-icon" href="/icon-180.png" />
+
+    <!-- Open Graph (WhatsApp, Instagram, LinkedIn, Facebook, iMessage) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="C S R VedVikas" />
+    <meta property="og:title" content="C S R VedVikas — Full-Stack Developer and ECE Portfolio" />
+    <meta
+      property="og:description"
+      content="Full-stack web applications, applied machine learning and security, hardware verification and antenna design."
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="C S R VedVikas — Full-Stack Developer and ECE Portfolio" />
+    <meta
+      name="twitter:description"
+      content="Full-stack web applications, applied machine learning and security, hardware verification and antenna design."
+    />
+    <!-- canonical, og:url and og:image need the real production domain. og-image.png (1200x630) is ready in public/.
+         Uncomment and replace the domain once the site has its final home:
+    <link rel="canonical" href="https://YOUR-DOMAIN/" />
+    <meta property="og:url" content="https://YOUR-DOMAIN/" />
+    <meta property="og:image" content="https://YOUR-DOMAIN/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="C S R VedVikas — portfolio" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://YOUR-DOMAIN/og-image.png" />
+    -->
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "C S R VedVikas",
+        "email": "mailto:csrved2504@gmail.com",
+        "jobTitle": "Final-year B.Tech student, Electronics and Communication Engineering",
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "PES University" },
+        "address": { "@type": "PostalAddress", "addressLocality": "Bengaluru", "addressCountry": "IN" },
+        "sameAs": ["https://github.com/CSR-VedVikas", "https://www.linkedin.com/in/ved-vikas-12a3212a3"],
+        "knowsAbout": ["Full-stack web development", "Applied machine learning", "Cybersecurity", "Hardware verification", "Antenna design"]
+      }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,6 +70,11 @@
     <script src="https://assets.emergent.sh/scripts/emergent-main.js"></script>
   </head>
   <body>
+    <noscript>
+      <h1>C S R VedVikas</h1>
+      <p>I build full-stack web applications. My recent work was production-shaped rather than tutorial-shaped: authentication, database migrations, dependency audits, timezone bugs. On the ECE side I worked on hardware verification and antenna design.</p>
+      <p>csrved2504@gmail.com · github.com/CSR-VedVikas · linkedin.com/in/ved-vikas-12a3212a3</p>
+    </noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

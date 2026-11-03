@@ -5,6 +5,7 @@ const LINKS = [
   { to: "/#credentials", label: "Credentials", id: "nav-credentials-link" },
   { to: "/#contact", label: "Contact", id: "nav-contact-link" },
   { to: "/forgefit", label: "ForgeFit", id: "nav-forgefit-link" },
+  { to: "/playbook", label: "Playbook", id: "nav-playbook-link" },
 ];
 
 export default function Nav() {
