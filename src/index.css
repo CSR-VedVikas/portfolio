@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+    font-size: 17px;
+    line-height: 1.55;
+  }
+
+  ::selection {
+    background-color: #c8411e;
+    color: #f4f2ed;
+  }
+
+  /* The only motion permitted on this site: a 120ms colour change on links and buttons. */
+  a,
+  button {
+    transition-property: color, background-color, border-color, text-decoration-color;
+    transition-duration: 120ms;
+    transition-timing-function: ease;
+  }
+
+  :focus-visible {
+    outline: 2px solid #c8411e;
+    outline-offset: 3px;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+}
