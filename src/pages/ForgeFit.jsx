@@ -126,7 +126,7 @@ export default function ForgeFit() {
 
   return (
     <main id="main">
-      <header className="mx-auto max-w-6xl px-5 md:px-10 pt-10 md:pt-16 pb-12 md:pb-16">
+      <header className="mx-auto max-w-6xl px-5 md:px-10 pt-28 md:pt-36 pb-12 md:pb-16">
         <TextLink href="/" testid="forgefit-back-home" className="font-mono text-[13px] uppercase tracking-[0.06em]">
           Back to home
         </TextLink>

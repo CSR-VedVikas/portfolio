@@ -4,11 +4,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        paper: "#F4F2ED",
-        ink: "#141414",
-        muted: "#6B6862",
+        paper: "#141210",
+        ink: "#F4F2ED",
+        muted: "#98938A",
         signal: "#C8411E",
-        hairline: "rgba(20, 20, 20, 0.15)",
+        "signal-bright": "#E85A38",
+        hairline: "rgba(244, 242, 237, 0.14)",
       },
       fontFamily: {
         serif: ['"Instrument Serif"', "Georgia", "serif"],

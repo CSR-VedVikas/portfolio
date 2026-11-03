@@ -22,7 +22,7 @@ export default function Playbook() {
 
   return (
     <main id="main">
-      <header className="mx-auto max-w-6xl px-5 md:px-10 pt-10 md:pt-16 pb-10 md:pb-12">
+      <header className="mx-auto max-w-6xl px-5 md:px-10 pt-28 md:pt-36 pb-10 md:pb-12">
         <TextLink href="/" testid="playbook-back-home" className="font-mono text-[13px] uppercase tracking-[0.06em]">
           Back to home
         </TextLink>
@@ -54,7 +54,7 @@ export default function Playbook() {
             preload="metadata"
             src="/cursor-demo.mp4"
             data-testid="playbook-demo-player"
-            className="w-full h-auto border border-hairline bg-ink"
+            className="w-full h-auto border border-hairline bg-black"
           />
           <figcaption className={`${MONO} text-muted mt-3`}>Cursor_Demo.mp4 — the project demo.</figcaption>
         </figure>

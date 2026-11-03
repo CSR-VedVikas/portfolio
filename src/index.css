@@ -7,6 +7,15 @@
     scroll-behavior: auto;
   }
 
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
   body {
     @apply bg-paper text-ink font-sans antialiased;
     font-size: 17px;
@@ -18,16 +27,16 @@
     color: #f4f2ed;
   }
 
-  /* The only motion permitted on this site: a 120ms colour change on links and buttons. */
+  /* Motion is colour/opacity/transform based and purposeful; this covers raw anchors and buttons. */
   a,
   button {
-    transition-property: color, background-color, border-color, text-decoration-color;
-    transition-duration: 120ms;
+    transition-property: color, background-color, border-color, text-decoration-color, opacity;
+    transition-duration: 200ms;
     transition-timing-function: ease;
   }
 
   :focus-visible {
-    outline: 2px solid #c8411e;
+    outline: 2px solid #e85a38;
     outline-offset: 3px;
   }
 
@@ -36,47 +45,69 @@
     max-width: 100%;
     height: auto;
   }
+}
 
-  @media print {
-    @page {
-      size: A4;
-      margin: 16mm 14mm;
-    }
-    body {
-      background: #ffffff;
-      font-size: 10.5pt;
-      line-height: 1.5;
-    }
-    header,
-    .no-print {
-      display: none !important;
-    }
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-    a[href^="http"]::after,
-    a[href^="mailto:"]::after {
-      content: " (" attr(href) ")";
-      font-family: "JetBrains Mono", monospace;
-      font-size: 8pt;
-      color: #6b6862;
-      word-break: break-all;
-    }
-    section {
-      border-color: #8a8a8a !important;
-    }
-    article,
-    figure,
-    table,
-    dl,
-    tr {
-      break-inside: avoid;
-    }
-    h1,
-    h2,
-    h3 {
-      break-after: avoid;
-    }
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 48s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 16mm 14mm;
+  }
+  body {
+    background: #ffffff !important;
+    color: #141414 !important;
+    font-size: 10.5pt;
+    line-height: 1.5;
+  }
+  * {
+    color: #141414 !important;
+    background-color: transparent !important;
+    border-color: #9a9a9a !important;
+    text-shadow: none !important;
+  }
+  header,
+  .no-print {
+    display: none !important;
+  }
+  a {
+    text-decoration: none;
+  }
+  a[href^="http"]::after,
+  a[href^="mailto:"]::after {
+    content: " (" attr(href) ")";
+    font-family: "JetBrains Mono", monospace;
+    font-size: 8pt;
+    color: #6b6862 !important;
+    word-break: break-all;
+  }
+  article,
+  figure,
+  table,
+  dl,
+  tr {
+    break-inside: avoid;
+  }
+  h1,
+  h2,
+  h3 {
+    break-after: avoid;
   }
 }

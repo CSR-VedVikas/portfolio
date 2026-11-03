@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const base =
-  "underline decoration-signal decoration-[1.5px] underline-offset-4 hover:text-signal";
+  "underline decoration-signal decoration-[1.5px] underline-offset-4 hover:text-signal-bright";
 
 export function TextLink({ href, children, className = "", testid, download }) {
   if (download) {
