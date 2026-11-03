@@ -113,10 +113,11 @@ const PHASES = [
 ];
 
 const SHOTS = [
-  ["SCREENSHOT_1.png", "Landing", "screenshot-landing"],
-  ["SCREENSHOT_2.png", "Dashboard", "screenshot-dashboard"],
+  ["SCREENSHOT_1.png", "Dashboard — the Today view", "screenshot-landing"],
+  ["SCREENSHOT_2.png", "Profile — stats and dashboard tiles", "screenshot-dashboard"],
   ["SCREENSHOT_3.png", "Smart Log preview with the match picker open", "screenshot-smart-log"],
-  ["SCREENSHOT_4.png", "Personal-record celebration", "screenshot-pr-celebration"],
+  ["SCREENSHOT_4.png", "Personal records on the workouts list", "screenshot-pr-celebration"],
+  ["SCREENSHOT_5.png", "Exercise library — 1,324 exercises with form GIFs", "screenshot-library"],
 ];
 
 export default function ForgeFit() {
